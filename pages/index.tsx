@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const prisma = new PrismaClient();
 
-export async function getServerSideProps() {
+export async function getStaticProps () {
   const jokes = await prisma.jokes.findMany();
   return {
     props: {
