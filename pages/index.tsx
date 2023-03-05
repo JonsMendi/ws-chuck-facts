@@ -1,12 +1,26 @@
-import ChuckHead from './chuck-head';
-import ChuckBody from './chuck-body';
-import ChuckFeets from './chuck-feets';
+import ChuckHead from './page-components/chuck-head';
+import ChuckBody from './page-components/chuck-body';
+import ChuckFeets from './page-components/chuck-feets';
+import { PrismaClient } from '@prisma/client';
+import { useState } from 'react';
 
-export default function Home() {
+const prisma = new PrismaClient();
+
+export async function getServerSideProps() {
+  const jokes = await prisma.jokes.findMany();
+  return {
+    props: {
+      jokes
+    }
+  }
+}
+
+export default function Home({ jokes }: { jokes: any[] }) {
+  const [joke] = useState(jokes);
   return (
     <div className='h-screen flex flex-col'>
       <ChuckHead/>
-      <ChuckBody/>
+      <ChuckBody facts={joke}/>
       <ChuckFeets/>
     </div>
   )

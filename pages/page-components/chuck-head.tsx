@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from '../public/ws-logo-white.png';
+import logo from '../../public/ws-logo-white.png';
 
 export default function ChuckHead() {
   return (

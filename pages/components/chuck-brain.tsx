@@ -19,21 +19,30 @@ export default function ChuckBrain({ updateFact }: { updateFact: UpdateFactFunct
     const response = await fetch('https://api.chucknorris.io/jokes/random?category=dev');
     const data = await response.json();
     updateFact(data.value);
+  
+    // Code store the new fact in the database
+    await fetch('/api/fact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ fact: data.value }),
+    });
   }
 
   return (
     <Canvas className="cursor-pointer" >
-      <OrbitControls enableZoom={false} /> {/* Provide mouse interaction with canvas */}
-      <ambientLight intensity={0.5} /> {/* Light inserted in the canvas */}
-      <directionalLight position={[-2, 5, 2]} intensity={1} /> {/* Direction of the light inserted in the canvas */}
+      <OrbitControls enableZoom={false} />{/* Provide mouse interaction with canvas */}
+      <ambientLight intensity={0.5} />{/* Light inserted in the canvas */}
+      <directionalLight position={[-2, 5, 2]} intensity={1} />{/* Direction of the light inserted in the canvas */}
       <Suspense fallback={null}>
-        <Sphere visible args={[1, 100, 200]} scale={2.5} onClick={fetchFact}> {/* Sphere is the form displayed by the canvas */}
+        <Sphere visible args={[1, 100, 200]} scale={2.5} onClick={fetchFact}>{/* Sphere is the form displayed by the canvas */}
           <MeshDistortMaterial 
             color="#e56520" 
             attach="material" 
             distort={0.5} 
             speed={2} 
-            roughness={0} /> {/* Mesh is the Sphere customization */}
+            roughness={0} />{/* Mesh is the Sphere customization */}
         </Sphere>
       </Suspense>
     </Canvas>
