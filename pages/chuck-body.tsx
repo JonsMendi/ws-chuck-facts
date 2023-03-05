@@ -18,10 +18,10 @@ export default function ChuckBody() {
       <div className="flex items-center">
         <div className="relative ml-20 py-10">
           <Canvas className="cursor-pointer" onClick={fetchFact}>
+            <OrbitControls enableZoom={false} />
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[-2, 5, 2]} intensity={1} />
             <Suspense fallback={null}>
-              <OrbitControls enableZoom={false} />
-              <ambientLight intensity={0.5} />
-              <directionalLight position={[-2, 5, 2]} intensity={1} />
               <ChuckBrain />
             </Suspense>
           </Canvas>
@@ -39,6 +39,7 @@ export default function ChuckBody() {
         </div>
       </div>
     </main>
+
   )
 }
 
