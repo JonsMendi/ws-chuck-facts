@@ -3,6 +3,9 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense, useState } from 'react';
 import { TbArrowBigLeftLinesFilled } from 'react-icons/tb';
 import ChuckBrain from './components/chuck-brain';
+import dynamic from 'next/dynamic';
+
+const DynamicCanvas = dynamic(() => import('./components/chuck-brain'), { ssr: false });
 
 
 export default function ChuckBody() {
@@ -16,15 +19,16 @@ export default function ChuckBody() {
   return (
     <main className='flex-col justify-center items-center h-screen bg-black'>
       <div className="flex items-center">
-        <div className="relative ml-20 py-10">
-          <Canvas className="cursor-pointer" onClick={fetchFact}>
-            <OrbitControls enableZoom={false}></OrbitControls>
+        <div className="relative ml-20 py-10" onClick={fetchFact}>
+          {/* <Canvas className="cursor-pointer" >
+            <OrbitControls enableZoom={false} />
             <ambientLight intensity={0.5} />
             <directionalLight position={[-2, 5, 2]} intensity={1} />
             <Suspense fallback={null}>
               <ChuckBrain />
             </Suspense>
-          </Canvas>
+          </Canvas> */}
+          <DynamicCanvas />
         </div>
         <div className="text-center mx-auto pt-20 max-w-[800px] min-w-[800px]">
           <div className="flex items-center justify-center text-5xl">
