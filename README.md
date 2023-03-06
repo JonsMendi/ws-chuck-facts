@@ -4,6 +4,7 @@ This is a Next.js app built with Three.js, Prisma, and Tailwind that generates a
 
 ## Github Pages
 https://jonsmendi.github.io/ws-chuck-facts/
+<a href="https://jonsmendi.github.io/ws-chuck-facts/" target="_blank">Chuck Meta Norris</a>
 
 ## Installation
 
