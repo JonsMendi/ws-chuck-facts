@@ -6,7 +6,7 @@ export default function ChuckHead() {
     <header className="flex items-center justify-between px-4 py-3 bg-black">
       <div>
         <a href="https://www.wus.agency/" target="_blank">
-          <Image src={logo} alt="Logo" width={80} height={80} />
+          <Image src={logo} alt="Logo" width={80} height={80} priority/>
         </a>
       </div>
     </header>

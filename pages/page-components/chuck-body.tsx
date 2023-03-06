@@ -1,6 +1,6 @@
-import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { TbArrowBigLeftLinesFilled } from 'react-icons/tb';
+import ChuckBrain from '../components/chuck-brain';
 
 interface Joke {
   id: string;
@@ -15,11 +15,6 @@ export default function ChuckBody({ facts }: ChuckBodyProps) {
   const [fact, setFact] = useState(facts?.[0].value || '');
 
   /**
-   * There is the need of using dynamic() because we are updating the state with the Canvas when using fetchFact() in ChuckBrain.
-   */
-  const DynamicCanvas = dynamic(() => import('../components/chuck-brain'), { ssr: false });
-
-  /**
    * Updates the fact value
    * @param newFact the fact comming from DynamicCanvas
    */
@@ -30,11 +25,9 @@ export default function ChuckBody({ facts }: ChuckBodyProps) {
   return (
     <main className='flex-col justify-center items-center h-screen bg-black'>
       <div className="flex items-center">
-        <section>
         <div className="relative ml-20 py-10">
-          <DynamicCanvas updateFact={updateFact}/>{/* 3D Canvas display */}
+          <ChuckBrain updateFact={updateFact}/>{/* 3D Canvas display */}
         </div>
-        </section>
         <div className="text-center mx-auto pt-20 max-w-[800px] min-w-[800px]">
           <div className="flex items-center justify-center text-5xl">
             <span className="text-white animate-pulse"><TbArrowBigLeftLinesFilled /></span>
