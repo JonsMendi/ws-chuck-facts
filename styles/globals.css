@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Bangers&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,4 +15,8 @@ body,
 canvas {
   height: 550px;
   width: 550px;
+}
+
+.chuck-title {
+  font-family: 'Bangers', cursive;
 }

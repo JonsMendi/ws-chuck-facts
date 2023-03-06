@@ -29,9 +29,9 @@ export default function ChuckBody({ facts }: ChuckBodyProps) {
           <ChuckBrain updateFact={updateFact}/>{/* 3D Canvas display */}
         </div>
         <div className="text-center mx-auto pt-20 max-w-[800px] min-w-[800px]">
-          <div className="flex items-center justify-center text-5xl">
+          <div className="flex items-center justify-center text-7xl">
             <span className="text-white animate-pulse"><TbArrowBigLeftLinesFilled /></span>
-            <span className="text-white font-bold ml-5">CHUCK META NORRIS</span>
+            <span className="text-white ml-5 chuck-title">CHUCK META NORRIS</span>
           </div>
             <p className="text-lg text-gray-500 font-bold mt-2">Dare you to click it?</p>
             <p className="text-3xl text-orange-600 font-bold py-5 px-4 leading-14 m-2 mt-2">
