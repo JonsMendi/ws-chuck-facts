@@ -1,38 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Chuck Meta Norris
 
-## Getting Started
+This is a Next.js app built with Three.js, Prisma, and Tailwind that generates a new Chuck Norris quote every time a 3D object is clicked. The footer displays the number of visitors to the site.
 
-First, run the development server:
+## Github Pages
+Click to visit: <a href="https://jonsmendi.github.io/ws-chuck-facts/" target="_blank">Chuck Meta Norris</a>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To install and run this app locally, follow these steps:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. Clone this repository.
+2. Install the dependencies by running `npm install`.
+3. Set up the database by running `npm run prisma migrate dev`.
+4. Start the development server with `npm run dev`.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Technologies Used
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+This app was built using the following technologies:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Next.js
+- Three.js
+- Prisma
+- Tailwind
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+This app includes the following features:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- A home page with a 3D object and a quote generator.
+- A footer that displays the number of visitors to the site.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+To use this app, simply visit the home page and click the 3D object to generate a new Chuck Norris quote. The footer will display the number of visitors to the site.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you would like to contribute to this app, please follow these steps:
+
+1. Fork this repository.
+2. Create a new branch with your changes.
+3. Submit a pull request.
+
+## License
+
+This app is licensed under the MIT License. See the `LICENSE` file for more information.
