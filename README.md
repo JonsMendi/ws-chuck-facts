@@ -3,8 +3,7 @@
 This is a Next.js app built with Three.js, Prisma, and Tailwind that generates a new Chuck Norris quote every time a 3D object is clicked. The footer displays the number of visitors to the site.
 
 ## Github Pages
-https://jonsmendi.github.io/ws-chuck-facts/
-<a href="https://jonsmendi.github.io/ws-chuck-facts/" target="_blank">Chuck Meta Norris</a>
+Click to visit: <a href="https://jonsmendi.github.io/ws-chuck-facts/" target="_blank">Chuck Meta Norris</a>
 
 ## Installation
 
