@@ -41,7 +41,3 @@ If you would like to contribute to this app, please follow these steps:
 1. Fork this repository.
 2. Create a new branch with your changes.
 3. Submit a pull request.
-
-## License
-
-This app is licensed under the MIT License. See the `LICENSE` file for more information.
